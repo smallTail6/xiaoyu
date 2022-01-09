@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            perspective: 1000px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .clearfix::before,
+        .clearfix::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+
+        ul {
+
+            list-style-type: none;
+            margin: 250px auto;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: run 10s linear infinite alternate;
+            
+        }
+
+        .cube {
+            width: 240px;
+            height: 240px;
+        }
+
+        .cube li {
+            width: 240px;
+            height: 240px;
+            position: absolute;
+            transition:.3s ease-in ;
+            /* backface-visibility:hidden; */
+        }
+
+        .ysy1 {
+            background: url(img/1.jpg);
+            transform: rotateY(-90deg) translateZ(120px);
+            background-size: 100% 100% !important;
+            
+           
+        }
+
+        .ysy2 {
+            background: url(img/2.jpg) 100% 100%;
+            transform: rotateY(90deg) translateZ(120px);
+            background-size: 100% 100% !important;
+            
+            
+        }
+
+        .ysy3 {
+            background: url(img/3.jpg) 100% 100%;
+            transform: rotateX(90deg) translateZ(120px);
+            background-size: 100% 100% !important;
+         
+        }
+
+        .ysy4 {
+            background: url(img/4.jpg) 100% 100%;
+            transform: rotateX(-90deg) translateZ(120px);
+            background-size: 100% 100% !important;
+         
+        }
+
+        .ysy5 {
+            background: url(img/5.jpg) 100% 100%;
+            transform: rotateY(0deg) translateZ(120px);
+            background-size: 100% 100% !important;
+          
+        }
+
+        .ysy6 {
+            background: url(img/6.jpg) 100% 100%;
+            transform: rotateY(-180deg) translateZ(120px);
+            background-size: 100% 100% !important;
+           
+        }
+
+        ul:hover .ysy1 {
+            transform: translateX(-240px) rotateY(-90deg) ;
+            
+        }
+
+        ul:hover .ysy2 {
+            transform: translateX(240px) rotateY(90deg) ;
+            
+        }
+
+        ul:hover .ysy3 {
+            transform: translateY(-240px)  rotateX(90deg) ;;
+          
+        }
+
+        ul:hover .ysy4 {
+            transform: translateY(240px)  rotateX(-90deg) ;;
+           
+        }
+
+        ul:hover .ysy5 {
+            transform: translateZ(240px) rotateY(0deg) ;;
+          
+        }
+
+        ul:hover .ysy6 {
+            transform: translateZ(-240px) rotateY(-180deg) ;;
+            
+        }
+
+        /* 中心小图标 */
+        .cube i {
+            display: block;
+            width: 50%;
+            height: 50%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+
+        .ysy7 {
+            background: url(img/1.jpg);
+            transform: rotateY(-90deg) translateZ(60px);
+            background-size: 100% 100% !important;
+
+        }
+
+        .ysy8 {
+            background: url(img/2.jpg) 100% 100%;
+            transform: rotateY(90deg) translateZ(60px);
+            background-size: 100% 100% !important;
+        }
+
+        .ysy9 {
+            background: url(img/3.jpg) 100% 100%;
+            transform: rotateX(90deg) translateZ(60px);
+            background-size: 100% 100% !important;
+        }
+
+        .ysy10 {
+            background: url(img/4.jpg) 100% 100%;
+            transform: rotateX(-90deg) translateZ(60px);
+            background-size: 100% 100% !important;
+        }
+
+        .ysy11 {
+            background: url(img/5.jpg) 100% 100%;
+            transform: rotateY(0deg) translateZ(60px);
+            background-size: 100% 100% !important;
+        }
+
+        .ysy12 {
+            background: url(img/6.jpg) 100% 100%;
+            transform: rotateY(-180deg) translateZ(60px);
+            background-size: 100% 100% !important;
+        }
+
+        @keyframes run {
+
+            form {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+
+            to {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="cube .clearfix">
+        <li></li>
+        <li class="ysy6 ">
+
+        </li>
+        <li class="ysy5">
+
+        </li>
+        <li class="ysy4">
+
+        </li>
+        <li class="ysy3">
+
+        </li>
+        <li class="ysy2">
+
+        </li>
+        <li class="ysy1">
+        </li>
+        <i class="ysy7"></i>
+        <i class="ysy8"></i>
+        <i class="ysy9"></i>
+        <i class="ysy10"></i>
+        <i class="ysy11"></i>
+        <i class="ysy12"></i>
+    </ul>
+</body>
+
+</html>
